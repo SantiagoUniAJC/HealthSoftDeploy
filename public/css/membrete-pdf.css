@@ -1,0 +1,287 @@
+/* eliminar todos los estilos de la página
+ */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../images/menbrete.png);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+}
+
+.custom-container { /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el contenido */
+    overflow: hidden; /* Evita que los elementos desborden */
+}
+
+header{
+    margin: 5px 50px;
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+header .info{
+    /* ocupe el 50% del ancho del header */
+    position: relative;
+    width: 40%;
+    height: 100%;
+    margin: 20px 20px;
+    font-size: 1em;
+    color: rgb(13, 109, 165);
+}
+
+.info .tabla{
+    width: 100%;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.info .tabla .teh{
+    text-align: left;
+}
+
+header .logo{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 50%;
+}
+
+.logo{
+    width: 50%;
+}
+
+/*Consentimiento Informado*/
+
+section{
+    margin: 10px 70px;
+
+}
+
+.titulos {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.parrafo {
+    text-align: justify;
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+.certifico{
+    text-align: justify;
+    margin: 10px 80px;
+}
+
+.constancia{
+    text-align: right;
+}
+
+.consentimiento {
+    background-color: rgb(13, 109, 165);
+    color: #FFF;
+    margin: 0;
+    padding: 0.5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/*FIRMA*/
+.firma {
+    border-top: 1px solid rgba(20, 20, 20, 0.5);
+    text-align: center;
+    width: 35%;
+    margin-left: 50%;
+    margin-top: 1px;
+    padding-top: 5px;
+    font-size: 0.8rem;
+}
+
+.firmadigital {
+    margin-left: 40%;
+    margin-top: 5px;
+    padding-top: 1px;
+    width: 50%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 30%
+ }
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: bold;
+
+}
+
+/*Orden de Servicio*/
+.OrdenServicio{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    background-color: rgb(13, 109, 165);
+    color: #FFF;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 3px;
+    width: 100%;
+
+}
+
+.OrdenServicio h1{
+    margin: 10px 0;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.tablaOrdenServicio {
+    width: 100%;
+}
+
+.tablaOrdenServicio table {
+    border: 1px solid black;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.tablaOrdenServicio table {
+    width: 100%;
+}
+
+.tablaOrdenServicio th,
+.tablaOrdenServicio td {
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: left; /* Alineación del texto en las celdas */
+    border-bottom: 1px solid #ddd; /* Borde inferior de cada fila */
+}
+
+.tablaOrdenServicio th {
+    background-color: #f2f2f2; /* Color de fondo de las celdas de cabecera */
+}
+
+.tablaOrdenServicio td {
+    background-color: #ffffff; /* Color de fondo de las celdas de contenido */
+}
+
+
+/*Fin de Orden de Servicio*/
+
+/*FOOTER*/
+footer {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+footer hr{
+    width: 90%;
+    position: relative;
+    left: 80px;
+    margin: 0;
+    padding: 0;
+    border: 2px solid rgb(137, 206, 143);
+}
+
+.fecha{
+    position: relative;
+    left: -150px;
+    font-size: 0.8rem;
+}
+
+.pag{
+    position: relative;
+    left: 150px;
+    font-size: 0.8rem;
+}
+
+.iconoEmail{    
+    position: relative;
+    left: -90px;
+    color: rgb(13, 109, 165);
+    margin-top: 20px;
+    opacity: 0.5;
+}
+
+.iconoPhone{
+    position: relative;
+    left: 0px;
+    color: rgb(13, 109, 165);
+    margin-top: 20px;
+    opacity: 0.5;
+}
+
+.iconoLocation{
+    position: relative;
+    left: 90px;
+    color: rgb(13, 109, 165);
+    margin-top: 20px;
+    opacity: 0.5;
+
+}
+
+.textEmail{
+    position: relative;
+    left: -95px;
+    top: -5px;
+    color: rgb(13, 109, 165);
+    font-size: 1.4rem;
+    font-style: bold;
+    opacity: 0.5;
+}
+
+.textPhone{
+    position: relative;
+    left: 0px;
+    top: -5px;
+    color: rgb(13, 109, 165);
+    font-size: 1.4rem;
+    font-style: bold;
+    opacity: 0.5;
+}
+
+.textLocation{
+    position: relative;
+    left: 90px;
+    top: -5px;
+    color: rgb(13, 109, 165);
+    font-size: 1.4rem;
+    font-style: bold;
+    opacity: 0.5;
+}
+
+.dirEmail{
+    position: relative;
+    left: -50px;
+    top: -5px;
+}
+
+.numberLocation{
+    position: relative;
+    left: 50px;
+    top: -5px;
+}
+
+

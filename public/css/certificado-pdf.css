@@ -1,0 +1,44 @@
+.contenedor {
+    width: 100%;
+}
+
+.certificado {
+    width: 74%;
+    height: 250px;
+}
+
+.foto {
+    width: 25%;
+}
+
+.foto img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black;
+    position: relative;
+    top: -40%;
+    right: -300%;
+
+}
+
+ .certificado table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+
+.certificado th, .certificado td {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.certificado th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.certificado td {
+    text-align: center;
+}
+

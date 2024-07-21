@@ -1,0 +1,43 @@
+figcaption {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.titulo {
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.paciente {
+    background-color: rgb(13, 109, 165);
+    color: white;
+    font-size: 0.8em;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    letter-spacing: 0.1em;
+}
+
+.datos table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8em;
+}
+.datos th, .datos td {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.datos th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.datos td {
+    text-align: center;
+}
