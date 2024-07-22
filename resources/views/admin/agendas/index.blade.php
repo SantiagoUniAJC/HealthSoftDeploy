@@ -39,10 +39,17 @@
                     weekday: 'long',
                     day: 'numeric',
                 },
-
+                dayHeaderContent: function(arg) {
+                    // Convertir la primera letra a mayúscula
+                    const text = arg.text.charAt(0).toUpperCase() + arg.text.slice(1);
+                    return {
+                        html: text
+                    };
+                },
                 buttonText: {
                     today: 'Volver al día de hoy',
                 },
+                allDayText: 'Todo el día',
                 slotMinTime: '07:00',
                 slotMaxTime: '17:00',
                 initialView: 'timeGridWeek',

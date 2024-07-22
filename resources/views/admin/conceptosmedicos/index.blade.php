@@ -10,7 +10,7 @@
     <script>
         Livewire.on('confirmUser', conceptoId => {
             Swal.fire({
-                title: "Estas seguro que deseas cerrar este concepto medico??",
+                title: "Estas seguro que deseas cerrar este concepto médico??",
                 text: "Esta acción no se podra revertir!",
                 icon: "error",
                 showCancelButton: true,
@@ -24,7 +24,7 @@
                     });
                     Swal.fire({
                         title: "Cerrado!",
-                        text: "El Concepto Medico ha sido cerrado correctamente.",
+                        text: "El Concepto Médico ha sido cerrado correctamente.",
                         icon: "success"
                     });
                 }

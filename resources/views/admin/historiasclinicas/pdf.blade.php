@@ -358,7 +358,7 @@
                                 {{ $motivo->secuelas }}
                             @endforeach
                         </td>
-                        <th>Descripcion de las Secuelas</th>
+                        <th>Descripción de las Secuelas</th>
                         <td colspan="3">
                             @foreach ($paciente->motivoConsulta as $motivo)
                                 {{ $motivo->descripcion_secuelas }}

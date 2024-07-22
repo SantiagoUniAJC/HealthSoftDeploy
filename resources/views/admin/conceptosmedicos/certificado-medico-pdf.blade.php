@@ -67,7 +67,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th colspan="2">Tipo de Evaluación & Enfasis</th>
+                            <th colspan="2">Tipo de Evaluación & Énfasis</th>
                             <td colspan="4">
                                 {{ $concepto->ordenDeServicio->tipo_evaluacion . ' - ' . $concepto->ordenDeServicio->enfasis }}
                             </td>

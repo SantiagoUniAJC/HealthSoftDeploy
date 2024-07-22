@@ -62,7 +62,7 @@
                             <td colspan="4">{{ $ordendeservicio->tipo_evaluacion }}</td>
                         </tr>
                         <tr>
-                            <th colspan="3"> Enfasis en:</th>
+                            <th colspan="3"> Énfasis en:</th>
                             <td colspan="4">{{ $ordendeservicio->enfasis }}</td>
                         </tr>
                         <tr>

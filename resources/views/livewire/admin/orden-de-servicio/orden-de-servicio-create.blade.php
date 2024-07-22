@@ -32,10 +32,10 @@
                                 <div class="mb-3 col-md-6">
                                     <div class="input-group">
                                         <span id="enfasis" class="input-group-text col-6 col-md-4 text-md-end"
-                                            for="enfasis">Enfasis en:</span>
+                                            for="enfasis">Énfasis en:</span>
                                         <select wire:model="enfasis" class="form-control col-6 col-md-8" name="enfasis">
                                             <option value="">Seleccione...</option>
-                                            <option value="Medico">Medico</option>
+                                            <option value="Medico">Médico</option>
                                             <option value="Psicologico">Psicologico</option>
                                             <option value="Fisioterapia">Fisioterapia</option>
                                             <option value="Terapia Ocupacional">Terapia Ocupacional</option>

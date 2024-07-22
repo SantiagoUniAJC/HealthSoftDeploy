@@ -35,7 +35,7 @@
                                 {{-- <th>Telefono Contacto 2</th> --}}
                                 <th>Correo Electronico</th>
                                 <th>Especialidad médica</th>
-                                <th>Registro Medico</th>
+                                <th>Registro Médico</th>
                                 <th>Fecha Inicio labor</th>
                                 {{-- <th>Experiencia Laboral</th> --}}
                                 {{-- <th>Certificaciones </th> --}}

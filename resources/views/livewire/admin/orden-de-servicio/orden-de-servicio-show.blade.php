@@ -74,7 +74,7 @@
                                     <input type="text" class="form-control mb-2"
                                         value="{{ $ordendeservicio->tipo_evaluacion }}" disabled>
                                 </div>
-                                <div class="col-md-6"> <label>Enfasis en:</label>
+                                <div class="col-md-6"> <label>Énfasis en:</label>
                                     <input type="text" class="form-control mb-2"
                                         value="{{ $ordendeservicio->enfasis }}" disabled>
                                 </div>

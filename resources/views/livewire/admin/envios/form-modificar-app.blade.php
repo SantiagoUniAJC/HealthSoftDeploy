@@ -13,7 +13,7 @@
                                 <x-input wire:model="nombres" type="text" class="mb-4" name="nombres"
                                     placeholder="Tu Nombre..." />
                                 <x-input-error for="nombres" class="text-danger" />
-                                <textarea wire:model="descripcion" type="text" class="" name="descripcion" placeholder="Tu descripcion ..."></textarea>
+                                <textarea wire:model="descripcion" type="text" class="" name="descripcion" placeholder="Tu descripción ..."></textarea>
                                 <x-input-error for="descripcion" class="text-danger" />
                                 <x-input wire:model="imagen" type="file" class="mt-4" name="imagen"
                                     placeholder="Tu imagen..." accept="image/*" />

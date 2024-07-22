@@ -300,7 +300,7 @@
                             </div>
                             <div class="col-md-4 col-sm-12">
                                 <x-adminlte-textarea wire:model='descripcion_secuelas' name="descripcion_secuelas"
-                                    label="Descripcion Secuelas" label-class="text-lightblue"
+                                    label="Descripción Secuelas" label-class="text-lightblue"
                                     data-placeholder="Select an option...">
                                     <x-slot name="prependSlot">
                                         <div class="input-group-text">

@@ -49,7 +49,7 @@
                                             type="text" class="form-control col-md-7" name="medio_venta" readonly />
                                     </div>
                                     <div class="input-group mb-3 col-md-4">
-                                        <span id="enfasis" class="input-group-text col-md-5" for="enfasis">Enfasis
+                                        <span id="enfasis" class="input-group-text col-md-5" for="enfasis">Énfasis
                                             en:
                                         </span>
                                         <select wire:model="enfasis" class="form-control col-6 col-md-8" name="enfasis">
@@ -57,7 +57,7 @@
                                                 {{ $ordendeservicio->enfasis }}</option>
                                             <hr>
                                             <option value="">Seleccione...</option>
-                                            <option value="Medico">Medico</option>
+                                            <option value="Medico">Médico</option>
                                             <option value="Psicologico">Psicologico</option>
                                             <option value="Fisioterapia">Fisioterapia</option>
                                             <option value="Terapia Ocupacional">Terapia Ocupacional</option>

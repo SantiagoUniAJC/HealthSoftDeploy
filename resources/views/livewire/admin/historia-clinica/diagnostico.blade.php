@@ -48,7 +48,7 @@
                             </div>
                             <div class="col-md-6 col-sm-8">
                                 <x-adminlte-input wire:model='descripcion_cie10' name="descripcion_cie10"
-                                    label="Descripcion CIE-10" label-class="text-lightblue">
+                                    label="Descripción CIE-10" label-class="text-lightblue">
                                     <x-slot name="prependSlot">
                                         <div class="input-group-text">
                                             <i class="fas fa-user-md"></i>
@@ -57,7 +57,7 @@
                                 </x-adminlte-input>
                             </div>
                             <div class="col-md-12 bg-lightblue pt-3 rounded mb-3">
-                                <h5 class="text text-center text-white">Recomendaciones Medico Laborales: </h5>
+                                <h5 class="text text-center text-white">Recomendaciones Médico Laborales: </h5>
                             </div>
                             <div class="col-md-6 col-sm-12">
                                 <x-adminlte-input wire:model='recomendaciones_medicas'

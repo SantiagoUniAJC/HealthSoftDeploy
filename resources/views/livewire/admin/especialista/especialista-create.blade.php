@@ -125,7 +125,7 @@
                                     <select wire:model="especialidad_medica"
                                         class="form-control form-control-md col-md-7" name="especialidad_medica">
                                         <option selected></option>
-                                        <option value="1">Medico Laboral</option>
+                                        <option value="1">Médico Laboral</option>
                                         <option value="2">Optometra</option>
                                         <option value="3">Psicolog@</option>
                                         <option value="4">Fonoaudiol@</option>

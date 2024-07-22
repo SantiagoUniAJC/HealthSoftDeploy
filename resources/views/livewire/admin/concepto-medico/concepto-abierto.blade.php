@@ -5,8 +5,8 @@
                 <div class="card card-secondary card-outline mt-3">
                     <div class="card-header">
                         <div class="row">
-                            <h3 class="card-title col-md-7">Conceptos Medicos: <span class="text font-italic"> Aqui
-                                    encontraras solo los conceptos medicos en estado <strong>en proceso</strong>.</span>
+                            <h3 class="card-title col-md-7">Conceptos Médicos: <span class="text font-italic"> Aqui
+                                    encontraras solo los conceptos médicos en estado <strong>en proceso</strong>.</span>
                             </h3>
                             <div class="col-md-5">
                                 <x-input wire:model.live="search" class="form-control text-center"
@@ -31,13 +31,13 @@
                                     <tr>
                                         <th>No. de Orden</th>
                                         <th>Tipo Evaluación</th>
-                                        <th>Enfasis</th>
+                                        <th>Énfasis</th>
                                         <th>Paciente</th>
                                         <th>Documento</th>
                                         <th>Cliente Solicita:</th>
                                         <th>Cargo a desempeñar</th>
-                                        <th>Concepto Medico</th>
-                                        <th>Descripcion</th>
+                                        <th>Concepto Médico</th>
+                                        <th>Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody>

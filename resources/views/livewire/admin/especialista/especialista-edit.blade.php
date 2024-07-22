@@ -105,7 +105,7 @@
                                     <option value="{{ $especialista->especialidad_medica }}" selected>
                                         {{ $especialista->especialidad_medica }}</option>
                                     <hr>
-                                    <option value="1">Medico Laboral</option>
+                                    <option value="1">Médico Laboral</option>
                                     <option value="2">Optometra</option>
                                     <option value="3">Psicolog@</option>
                                     <option value="4">Fonoaudiol@</option>
@@ -115,7 +115,7 @@
                             <div class="input-group mb-3 col-md-4">
                                 <span id="registro_medico" class="input-group-text col-md-5"
                                     for="registro_medico">Registro
-                                    Medico:</span>
+                                    Médico:</span>
                                 <input wire:model="registro_medico" type="text" class="form-control col-md-7"
                                     name="registro_medico" value="{{ $especialista->registro_medico }}">
                             </div>

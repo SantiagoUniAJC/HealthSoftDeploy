@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <form wire:submit='crearNotaMedica'>
 
-                            <x-adminlte-textarea wire:model='descripcion' name="descripcion" label="Description" rows=5 label-class="text-warning"
+                            <x-adminlte-textarea wire:model='descripcion' name="descripcion" label="Descripción" rows=5 label-class="text-warning"
                                 igroup-size="sm" placeholder="Inserte la descripción de la nota medica...">
                                 <x-slot name="prependSlot">
                                     <div class="input-group-text bg-dark">

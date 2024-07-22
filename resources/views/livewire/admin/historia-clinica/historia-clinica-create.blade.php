@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-4">
-                    <x-adminlte-input wire:model='enfasis' name="enfasis" label="Enfasis" label-class="text-lightblue"
+                    <x-adminlte-input wire:model='enfasis' name="enfasis" label="Énfasis" label-class="text-lightblue"
                         data-placeholder="Select an option..." readonly>
                         <x-slot name="prependSlot">
                             <div class="input-group-text">
