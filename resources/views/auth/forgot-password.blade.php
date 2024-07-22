@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <img src="/images/logo_HSEQ.png" alt="Imagen Login" srcset="">
+            <h1 class="text text-center text-uppercase text-bold">Asesores & Consultores en Prevensión</h1>
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">

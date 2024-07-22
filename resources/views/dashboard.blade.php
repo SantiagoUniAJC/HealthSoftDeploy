@@ -41,12 +41,20 @@
 @section('content')
     <h3>Templates Seleccionados para el Home de HealthCare</h3>
     <ol>
-        <li><a href="https://preview.themeforest.net/item/maxi-health-medical-health-html-template/full_screen_preview/13619290" target="_blank">Opcion Uno</a></li>
-        <li><a href="https://preview.themeforest.net/item/merit-health-medical-business-html-template-rtl-ready/full_screen_preview/45346315" target="_blank">Opcion Dos</a></li>
-        <li><a href="http://preview.themeforest.net/item/medical-plus-health-and-medical-html-template/full_screen_preview/19772206" target="_blank">Opcion Tres</a></li>
-        <li><a href="https://preview.themeforest.net/item/heart-care-heart-and-medical-care/full_screen_preview/20686789" target="_blank">Opcion Cuatro</a></li>
+        <li><a href="https://preview.themeforest.net/item/maxi-health-medical-health-html-template/full_screen_preview/13619290"
+                target="_blank">Opcion Uno</a></li>
+        <li><a href="https://preview.themeforest.net/item/merit-health-medical-business-html-template-rtl-ready/full_screen_preview/45346315"
+                target="_blank">Opcion Dos</a></li>
+        <li><a href="http://preview.themeforest.net/item/medical-plus-health-and-medical-html-template/full_screen_preview/19772206"
+                target="_blank">Opcion Tres</a></li>
+        <li><a href="https://preview.themeforest.net/item/heart-care-heart-and-medical-care/full_screen_preview/20686789"
+                target="_blank">Opcion Cuatro</a></li>
     </ol>
-    <h1>Mas Opciones?</h1>
+
+    <div class="container text-center">
+        <x-adminlte-alert theme="dark" title="Importante" width='50%'>
+            <a href="https://mail.hostinger.com/?_task=logout&_token=ZOGP8wJgfIwEezg2gWip6zVdu4p6y9lB" target="_blank">Desde aqui podras
+                acceder al MailServer</a>
+        </x-adminlte-alert>
+    </div>
 @endsection
-
-
