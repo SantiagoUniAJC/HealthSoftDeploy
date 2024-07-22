@@ -25,7 +25,7 @@
                                     <x-input-error for="ciudad_id" class="text-danger" />
                                 </div>
 
-                                {{-- agregar un checkbox con la opcion de agregar todos los examenes --}}
+                                {{-- checkbox con la opcion de agregar todos los examenes --}}
                                 <div class="col-md-3">
                                     <div class="input-group">
                                         <span class="input-group-text col-md-11" for="todos">Agregar todos los CUPS
@@ -100,7 +100,7 @@
                                                 <span id="precio" class="input-group-text col-md-4"
                                                     for="precio">Precio:</span>
                                                 <input wire:model="precio" type="number" class="form-control col-md-8"
-                                                    name="precio" />
+                                                    name="precio" min="0" />
                                             </div>
                                             <x-input-error for="precio" class="text-danger" />
                                         </div>
@@ -109,9 +109,9 @@
                                                 <span id="descuento" class="input-group-text col-md-6"
                                                     for="descuento">Descuento</span>
                                                 <input wire:model="descuento" type="number"
-                                                    class="form-control col-md-8" name="descuento" />
+                                                    class="form-control col-md-8" name="descuento" min="0"/>
                                             </div>
-                                            <x-input-error for="descuento" class="text-danger" />
+                                            <x-input-error for="descuento" class="text-danger"/>
                                         </div>
 
                                         <div class="input-group mb-3 col-md-4">
@@ -169,13 +169,13 @@
                                                         <x-input
                                                             wire:model='examenesSeleccionados.{{ $index }}.precio'
                                                             type="number" name="precio" id="precio"
-                                                            class="form form-control text-center" />
+                                                            class="form form-control text-center" min="0"/>
                                                     </td>
                                                     <td>
                                                         <x-input
                                                             wire:model='examenesSeleccionados.{{ $index }}.descuento'
                                                             type="number" name="descuento" id="descuento"
-                                                            class="form form-control text-center" />
+                                                            class="form form-control text-center" min="0"/>
                                                     </td>
                                                     <td class="text-center">{{ $examen['ciudad_id'] }}</td>
 
@@ -218,11 +218,11 @@
                                                 <td class="text-center">{{ $cup->tipo }}</td>
                                                 <td>
                                                     <input type="number" wire:model="precios.{{ $cup->id }}"
-                                                        class="form-control">
+                                                        class="form-control" min="0">
                                                 </td>
                                                 <td>
                                                     <input type="number" wire:model="descuentos.{{ $cup->id }}"
-                                                        class="form-control">
+                                                        class="form-control" min="0">
                                                 </td>
                                                 <td>
                                                     <select wire:model="ciudad_ids.{{ $cup->id }}"
