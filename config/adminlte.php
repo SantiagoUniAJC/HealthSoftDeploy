@@ -378,7 +378,7 @@ return [
             ],
         ],
         [
-            'text'    => 'Concepto Medico',
+            'text'    => 'Concepto Médico',
             'icon'    => 'fas fa-fw fa-medkit',
             'submenu' => [
                 [
@@ -388,7 +388,7 @@ return [
                     'icon_color' => 'blue',
                 ],
                 [
-                    'text' => 'Notas Medicas',
+                    'text' => 'Notas médicas',
                     'url'  => 'admin/notasmedicas',
                     'icon'    => 'fas fa-fw fa-sticky-note',
                     'icon_color' => 'red',

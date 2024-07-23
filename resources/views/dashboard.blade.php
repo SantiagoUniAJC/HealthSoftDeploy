@@ -58,3 +58,9 @@
         </x-adminlte-alert>
     </div>
 @endsection
+
+@section('footer')
+    <x-adminlte-callout theme="warning" title="Información Importante">
+        <p>Ultima actualización <span>{{ exec('git log -1 --format=%cd') }}</span></p>
+    </x-adminlte-callout>
+@endsection
