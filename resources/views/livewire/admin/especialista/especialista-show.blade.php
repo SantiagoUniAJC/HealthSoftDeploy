@@ -8,10 +8,16 @@
                 <div class="card-body">
                     @if ($especialista)
                         <div class="row">
-                            <div class="col-md-4 mb-4">
-                                <img src="{{ $especialista->path_fotografia }}" alt="{{ $especialista->nombres }}"
-                                    class="img-fluid">
-                            </div>
+                            @if ($especialista->path_fotografia == null)
+                                <div class="col-md-4 mb-4">
+                                    <img src="{{ asset('images/iconos/especialista_sin_foto.jpg') }}" alt="{{ $especialista->nombres . ' ' . $especialista->apellidos . ': ' . 'imagen del especialista, no cargada.' }}" class="img-fluid" width="90%">
+                                </div>
+                            @else
+                                <div class="col-md-4 mb-4">
+                                    <img src="{{ $especialista->path_fotografia }}" alt="{{ $especialista->nombres }}"
+                                        class="img-fluid">
+                                </div>
+                            @endif
                             <div class="col-md-4">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text col-md-6">Nombres:</span>

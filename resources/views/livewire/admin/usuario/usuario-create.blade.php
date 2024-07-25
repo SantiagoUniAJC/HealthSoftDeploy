@@ -45,14 +45,14 @@
                                     </div>
                                     <x-input-error for="email" class="text-danger" />
                                 </div>
-                                <div class="mb-2 col-md-4">
+                                <div class="mb-2 col-md-6">
                                     <div class="input-group">
-                                        <span id="password" class="input-group-text col-md-5"
+                                        <span id="password" class="input-group-text col-md-3"
                                             for="password">Password:</span>
-                                        <x-input wire:model="password" type="password" class="form-control col-md-7"
-                                            name="password" />
+                                        <x-input wire:model="password" type="password" class="form-control col-md-9"
+                                            name="password" placeholder="La contraseña debe tener mas de 8 caracteres."/>
                                     </div>
-                                    <x-input-error for="telefono" class="text-danger" />
+                                    <x-input-error for="password" class="text-danger" />
                                 </div>
                                 {{-- Insertarla imgen --}}
                                 {{-- <div class="mb-2 col-md-4">

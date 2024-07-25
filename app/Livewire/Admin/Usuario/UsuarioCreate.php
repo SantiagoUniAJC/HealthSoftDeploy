@@ -29,6 +29,7 @@ class UsuarioCreate extends Component
             'password' => 'required|min:8',
         ], [
             'email.unique' => 'El correo electrónico ya está en uso.',
+            'password.min' => 'La contraseña debe tener al menos 8 caracteres.',
         ]);
         
         User::create([
