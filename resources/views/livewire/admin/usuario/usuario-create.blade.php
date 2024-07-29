@@ -32,7 +32,7 @@
                                         <span id="telefono" class="input-group-text col-md-5"
                                             for="telefono">Telefono:</span>
                                         <x-input wire:model="telefono" type="number" class="form-control col-md-7"
-                                            name="telefono" />
+                                            name="telefono" min="0"/>
                                     </div>
                                     <x-input-error for="telefono" class="text-danger" />
                                 </div>

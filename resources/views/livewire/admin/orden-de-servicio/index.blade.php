@@ -28,7 +28,7 @@
                         <table class="table table-bordered table-responsive-xl">
                             <thead>
                                 <tr>
-                                    <th>Numero de Orden</th>
+                                    <th>Número de orden</th>
                                     <th>Tipo Evaluación</th>
                                     <th>Medio de Venta</th>
                                     <th>Nombre del Paciente</th>
@@ -39,7 +39,7 @@
                                     <th>Cargo a desempeñar</th>
                                     <th>Fecha Solicitud</th>
                                     <th>Procedimientos</th>
-                                    <th>Estado</th>
+                                    <th class="text-center">Estado</th>
                                     <th colspan="4" class="text-center">Acciones</th>
                                 </tr>
                             </thead>

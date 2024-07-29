@@ -16,15 +16,14 @@
                                         <select wire:model="tipo_evaluacion" class="form-control col-6 col-md-8"
                                             name="tipo_evaluacion">
                                             <option value="">Seleccione una opción</option>
-                                            <option value="Pre-Ingreso">Pre-Ingreso</option>
-                                            <option value="Periodico">Periódico</option>
-                                            <option value="Reubicación">Reubicación</option>
-                                            <option value="Cambio de Ocupación">Cambio de Ocupación</option>
-                                            <option value="Egreso">Egreso</option>
-                                            <option value="Post-incapacidad">Post-Incapacidad</option>
-                                            <option value="Reintegro Laboral">Reintegro Laboral</option>
-                                            <option value="Seguimiento">Seguimiento</option>
-                                            <option value="Otro">Otro</option>
+                                            <option value="cambio_de_ocupacion">Cambio de Ocupación</option>
+                                            <option value="egreso">Egreso</option>
+                                            <option value="pre_ingreso">Pre-Ingreso</option>
+                                            <option value="periodico">Periódico</option>
+                                            <option value="post_incapacidad">Post-Incapacidad</option>                                            
+                                            <option value="reubicacion">Reubicación</option>                                           
+                                            <option value="reintegro_laboral">Reintegro Laboral</option>
+                                            <option value="seguimiento">Seguimiento</option>
                                         </select>
                                     </div>
                                     <x-input-error for="tipo_evaluacion" class="text-danger" />
@@ -35,14 +34,23 @@
                                             for="enfasis">Énfasis en:</span>
                                         <select wire:model="enfasis" class="form-control col-6 col-md-8" name="enfasis">
                                             <option value="">Seleccione...</option>
-                                            <option value="Medico">Médico</option>
-                                            <option value="Psicologico">Psicologico</option>
-                                            <option value="Fisioterapia">Fisioterapia</option>
-                                            <option value="Terapia Ocupacional">Terapia Ocupacional</option>
-                                            <option value="Fonoaudiologia">Fonoaudiologia</option>
-                                            <option value="Psiquiatrico">Psiquiatrico</option>
-                                            <option value="Nutricional">Nutricional</option>
-                                            <option value="Otros">Otros</option>
+                                            <option value="brigadista">Brigadista</option>
+                                            <option value="cardiomuscular">Cardiomuscular</option>
+                                            <option value="conductor">Conducción de Vehículo</option>
+                                            <option value="dermatologico">Dermatológico</option>
+                                            <option value="espacios_confinados">Espacios Confinados</option>
+                                            <option value="expo_radiaciones_ionizantes">Exposición a Radiaciones ionizantes</option>
+                                            <option value="manipulacion_de_alimentos">Manipulación de Alimentos</option>
+                                            <option value="manipulacion_de_farmacos">Manipulación Productos Farmacéuticos</option>
+                                            <option value="neurologico">Neurológico</option>
+                                            <option value="osteomuscular">Osteomuscular</option>
+                                            <option value="osteomuscular_fisioterapia">Osteomuscular - Fisioterapia</option>
+                                            <option value="pruebas_psicosensometricas">Pruebas Psicosensométricas</option>
+                                            <option value="riesgo_covid-19">Riesgo para COVID-19</option>
+                                            <option value="sistema_fonatorio">Sistema Fonatorio</option>                                    
+                                            <option value="trabajo_en_alturas">Trabajo en Alturas</option>
+                                            <option value="trabajo_riesgo_electrico">Trabajo Riesgo Eléctrico</option>
+                                            <option value="no_aplica">No Aplica</option>                                               
                                         </select>
                                     </div>
                                     <x-input-error for="enfasis" class="text-danger" />

@@ -33,7 +33,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Registro</th>
                                         <th>Nombre & Apellido</th>
                                         <th>Cargo</th>
                                         <th>Role</th>
@@ -45,7 +45,7 @@
                                 <tbody>
                                     @foreach ($users as $user)
                                         <tr>
-                                            <td>{{ $user->id }}</td>
+                                            <td class="text-center">{{ $loop->iteration }}</td>
                                             <td>{{ $user->name }}</td>
                                             <td>{{ $user->cargo }}</td>
                                             <td>

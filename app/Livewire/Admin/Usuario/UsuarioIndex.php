@@ -29,7 +29,7 @@ class UsuarioIndex extends Component
                 ->orWhere('email', 'LIKE', '%' . $this->search . '%');
         })
         ->OrderBy('created_at', 'desc')
-        ->paginate(5);
+        ->paginate(7);
 
         return view('livewire.admin.usuario.usuario-index', compact('users'));
     }
