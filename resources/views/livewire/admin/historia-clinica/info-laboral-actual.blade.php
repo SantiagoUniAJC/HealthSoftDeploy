@@ -4,14 +4,17 @@
             <div class="card card-success card-outline mt-3">
                 <div class="card-header">
                     <div class="row">
-                        <h4 class="card-title col-md-8">EVALUACIÓN MÉDICA OCUPACIONAL: <span
-                                class="text text-bold text-uppercase">
-                                {{ $paciente->nombres . ' ' . $paciente->apellidos }} </span> </h4>
-
-                        <div class="col-md-4">
-                            <x-adminlte-info-box title="Historia Clinica 1 - 12" text="8.3/100"
-                                icon="fas fa-lg fa-tasks text-orange" theme="warning" icon-theme="dark" progress=8.3
-                                progress-theme="dark" description="8.3% de las tareas han sido completadas" />
+                        <div class="col-md-10">
+                            <h4 class="card-title col-md-8">EVALUACIÓN MÉDICA OCUPACIONAL: <span
+                                    class="text text-bold text-uppercase">
+                                    {{ $paciente->nombres . ' ' . $paciente->apellidos }} </span> </h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card border-warning mb-3">
+                                <div class="card-header bg-warning text-light">
+                                    <i class="fas fa-lg fa-tasks"></i> Historia Clínica 1 - 12
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -403,30 +406,6 @@
                         </div>
                     </div>
                     {{-- Fin Modales --}}
-                </div>
-                <div class="card-footer">
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <button wire:click="previousPage({{ $paciente->id }})" wire:loading.attr="disabled"
-                                class="btn btn-outline-primary">
-                                <span wire:loading.remove>
-                                    <i class="fas fa-arrow-left"></i> Volver
-                                </span>
-                                <span wire:loading>
-                                    <i class="fas fa-spinner fa-spin"></i>
-                                </span>
-                            </button>
-                        </div>
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4 text-center">
-                            <button wire:click="" wire:loading.attr="disabled" class="btn btn-outline-danger">
-                                <span wire:loading.remove>Guardar & Salir</span>
-                                <span wire:loading>
-                                    <i class="fas fa-spinner fa-spin"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

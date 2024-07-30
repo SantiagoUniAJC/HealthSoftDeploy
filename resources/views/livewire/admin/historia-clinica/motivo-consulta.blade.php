@@ -3,8 +3,20 @@
         <div class="col-md-12">
             <div class="card card-success card-outline mt-3">
                 <div class="card-header">
-                    <h4 class="card-title">EVALUACIÓN MÉDICA OCUPACIONAL: <span class="text text-bold text-uppercase">
-                            {{ $paciente->nombres . ' ' . $paciente->apellidos }} </span> </h4>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h4 class="card-title col-md-8">EVALUACIÓN MÉDICA OCUPACIONAL: <span
+                                    class="text text-bold text-uppercase">
+                                    {{ $paciente->nombres . ' ' . $paciente->apellidos }} </span> </h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card border-warning mb-3">
+                                <div class="card-header bg-warning text-light">
+                                    <i class="fas fa-lg fa-tasks"></i> Historia Clínica 2 - 12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-body">
                     <form wire:submit='guardarMotivoConsulta'>
@@ -126,7 +138,8 @@
                             </div>
                             <div class="col-md-2 col-sm-4">
                                 <x-adminlte-input wire:model='tiempo_laborado' name="tiempo_laborado"
-                                    label="Tiempo laborado (Años)" label-class="text-lightblue" type="number" min="0" max="100">
+                                    label="Tiempo laborado (Años)" label-class="text-lightblue" type="number"
+                                    min="0" max="100">
                                     <x-slot name="prependSlot">
                                         <div class="input-group-text">
                                             <i class="fas fa-calendar-alt text-lightblue"></i>

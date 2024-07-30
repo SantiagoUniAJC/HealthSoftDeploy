@@ -3,8 +3,20 @@
         <div class="col-md-12">
             <div class="card card-success card-outline mt-3">
                 <div class="card-header">
-                    <h4 class="card-title">EVALUACIÓN MÉDICA OCUPACIONAL: <span class="text text-bold text-uppercase">
-                            {{ $paciente->nombres . ' ' . $paciente->apellidos }} </span> </h4>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h4 class="card-title col-md-8">EVALUACIÓN MÉDICA OCUPACIONAL: <span
+                                    class="text text-bold text-uppercase">
+                                    {{ $paciente->nombres . ' ' . $paciente->apellidos }} </span> </h4>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="card border-warning mb-3">
+                                <div class="card-header bg-warning text-light">
+                                    <i class="fas fa-lg fa-tasks"></i> Historia Clínica 6 - 12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="col-md-12 bg-lightblue pt-3 rounded mb-3">
