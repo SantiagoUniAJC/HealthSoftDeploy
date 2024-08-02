@@ -16,19 +16,20 @@
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-hover">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     {{-- <th>Id</th> --}}
                                     <th>Fecha de Creación</th>
                                     <th>Nombre del Paciente</th>
-                                    <th>Tipo & Documento</th>
+                                    <th>Tipo & # Documento</th>
                                     <th>Fecha de Nacimiento</th>
                                     <th>Genero</th>
+                                    <th >Servicio</th>
                                     <th colspan="4">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($historiasClinicas as $historia)
-                                    <tr>
+                                    <tr class="text-center">
                                         {{-- <td>{{ $historia->id }}</td> --}}
                                         <td>{{ $historia->created_at }}</td>
                                         <td>{{ $historia->paciente->nombres . ' ' . $historia->paciente->apellidos }}
@@ -37,6 +38,7 @@
                                         </td>
                                         <td>{{ $historia->paciente->fecha_de_nacimiento }}</td>
                                         <td>{{ $historia->paciente->genero }}</td>
+                                        <td>{{ $historia->cita->nombre_examen }}</td>
                                         <td>
                                             <a href="{{ route('admin.historias-clinicas.show', $historia->paciente->id) }}"
                                                 class="btn btn-outline-primary btn-sm">

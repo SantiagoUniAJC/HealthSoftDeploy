@@ -46,8 +46,8 @@
                             </div>
                             <div class="mb-2 col-md-4">
                                 <div class="input-group">
-                                    <span id="numero_identificacion"  class="input-group-text"
-                                        for="numero_identificacion">Numero
+                                    <span id="numero_identificacion"  class="input-group-text col-md-5"
+                                        for="numero_identificacion">Número
                                         Documento:</span>
                                     <x-input wire:model="numero_identificacion" type="number" class="form-control"
                                         name="numero_identificacion" min="0"/>

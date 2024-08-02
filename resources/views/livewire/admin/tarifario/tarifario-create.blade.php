@@ -219,6 +219,7 @@
                                                 <td>
                                                     <input type="number" wire:model="precios.{{ $cup->id }}"
                                                         class="form-control" min="0">
+                                                        <x-input-error for="precios.{{ $cup->id }}" class="text-danger"/>
                                                 </td>
                                                 <td>
                                                     <input type="number" wire:model="descuentos.{{ $cup->id }}"
@@ -233,6 +234,8 @@
                                                             </option>
                                                         @endforeach
                                                     </select>
+                                                    <x-input-error for="ciudad_ids.{{ $cup->id }}"
+                                                        class="text-danger"/>
                                                 </td>
                                             </tr>
                                         @endforeach

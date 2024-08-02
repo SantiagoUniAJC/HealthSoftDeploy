@@ -8,6 +8,8 @@ use App\Models\Cliente;
 use App\Models\Cup;
 use App\Models\Tarifa;
 use App\Rules\UniqueTarifaPorCiudad;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Validator;
 
 class TarifarioCreate extends Component
 {
@@ -142,44 +144,69 @@ class TarifarioCreate extends Component
     {
         $this->actualizarclienteId();
 
+        $cupsCollection = $this->cups->keyBy('id'); // Obtén todos los cups y ordénalos por id
         $examenesActivos = [];
-
+        // Validar los campos de precio y ciudad
         foreach ($this->selectedCups as $cupId => $selected) {
             if ($selected) {
-                $examenesActivos[] = [
-                    'codigo' => $this->cups->find($cupId)->codigo,
-                    'nombre' => $this->cups->find($cupId)->nombre,
-                    'tipo' => $this->cups->find($cupId)->tipo ?? 'Sin tipo',
-                    'precio' => $this->precios[$cupId],
-                    'descuento' => $this->descuentos[$cupId] ?? 0,
-                    'ciudad_id' => Ciudad::find($this->ciudad_ids[$cupId])->id ?? 'Sin ciudad'
+                
+                $data = [
+                    'precio' => $this->precios[$cupId] ?? null,
+                    'descuento' => $this->descuentos[$cupId] ?? null,
+                    'ciudad_id' => $this->ciudad_ids[$cupId] ?? null,
                 ];
+                
+                $validator = Validator::make($data, [
+                    'precio' => 'required|numeric',
+                    'descuento' => 'nullable|numeric',
+                    'ciudad_id' => 'required|exists:ciudads,id',
+                ]);
+
+                if ($validator->fails()) {
+                    
+                    return redirect()->route('admin.tarifarios.index', $this->cliente)->with('danger', '¡Los campos precio & ciudad, son obligatorios!');
+                }
+
+                $cup = $cupsCollection->get($cupId);
+                if ($cup) {
+                    $examenesActivos[] = [
+                        'codigo' => $cup->codigo,
+                        'nombre' => $cup->nombre,
+                        'tipo' => $cup->tipo ?? 'Sin tipo',
+                        'precio' => $this->precios[$cupId],
+                        'descuento' => $this->descuentos[$cupId] ?? 0,
+                        'ciudad_id' => $this->ciudad_ids[$cupId]
+                    ];
+                }
             }
         }
 
-        foreach ($examenesActivos as $examen) {
+        try {
+            foreach ($examenesActivos as $examen) {
+                $tarifa = new Tarifa();
+                $tarifa->codigo = $examen['codigo'];
+                $tarifa->nombre = $examen['nombre'];
+                $tarifa->tipo = $examen['tipo'];
+                $tarifa->precio = $examen['precio'];
+                $tarifa->descuento = $examen['descuento'];
+                $tarifa->ciudad_id = $examen['ciudad_id'];
+                $tarifa->cliente_id = $this->cliente_id;
+                $tarifa->user_id = $this->user_id;
+                $tarifa->save();
+            }
 
-            $tarifa = new Tarifa();
-            $tarifa->codigo = $examen['codigo'];
-            $tarifa->nombre = $examen['nombre'];
-            $tarifa->tipo = $examen['tipo'];
-            $tarifa->precio = $examen['precio'];
-            $tarifa->descuento = $examen['descuento'];
-            $tarifa->ciudad_id = $examen['ciudad_id'];
-            $tarifa->cliente_id = $this->cliente_id;
-            $tarifa->user_id = $this->user_id;
-            $tarifa->save();
+            $this->reset(['selectedCups', 'precios', 'descuentos', 'ciudad_ids', 'todos']);
 
+            return redirect()->route('admin.tarifarios.index', $this->cliente)->with('success', '¡Tarifarios creados con éxito!');
+        } catch (\Exception $e) {
+            
+            return redirect()->back()->with('error', 'Hubo un problema al crear las tarifas.')->withInput();
         }
-
-        $this->reset(['selectedCups', 'precios', 'descuentos', 'ciudad_ids', 'todos']);
-
-        return redirect()->route('admin.tarifarios.index', $this->cliente)->with('success', '¡Tarifarios creados con éxito!');
     }
 
     public function crearTarifa()
     {
-        $this->actualizarclienteId();        
+        $this->actualizarclienteId();
 
         if (count($this->examenesSeleccionados) > 0) {
 
@@ -192,7 +219,6 @@ class TarifarioCreate extends Component
             $this->reset(['examenesSeleccionados', 'codigo', 'tipo', 'nombre', 'precio', 'descuento']);
 
             return redirect()->route('admin.tarifarios.index', $this->cliente)->with('success', '¡Tarifarios creados con éxito!');
-
         } else {
 
             $this->validate();
