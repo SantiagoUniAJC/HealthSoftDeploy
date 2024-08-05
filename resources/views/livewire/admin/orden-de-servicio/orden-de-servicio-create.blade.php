@@ -20,40 +20,13 @@
                                             <option value="egreso">Egreso</option>
                                             <option value="pre_ingreso">Pre-Ingreso</option>
                                             <option value="periodico">Periódico</option>
-                                            <option value="post_incapacidad">Post-Incapacidad</option>                                            
-                                            <option value="reubicacion">Reubicación</option>                                           
+                                            <option value="post_incapacidad">Post-Incapacidad</option>
+                                            <option value="reubicacion">Reubicación</option>
                                             <option value="reintegro_laboral">Reintegro Laboral</option>
                                             <option value="seguimiento">Seguimiento</option>
                                         </select>
                                     </div>
                                     <x-input-error for="tipo_evaluacion" class="text-danger" />
-                                </div>
-                                <div class="mb-3 col-md-6">
-                                    <div class="input-group">
-                                        <span id="enfasis" class="input-group-text col-6 col-md-4 text-md-end"
-                                            for="enfasis">Énfasis en:</span>
-                                        <select wire:model="enfasis" class="form-control col-6 col-md-8" name="enfasis">
-                                            <option value="">Seleccione...</option>
-                                            <option value="brigadista">Brigadista</option>
-                                            <option value="cardiomuscular">Cardiomuscular</option>
-                                            <option value="conductor">Conducción de Vehículo</option>
-                                            <option value="dermatologico">Dermatológico</option>
-                                            <option value="espacios_confinados">Espacios Confinados</option>
-                                            <option value="expo_radiaciones_ionizantes">Exposición a Radiaciones ionizantes</option>
-                                            <option value="manipulacion_de_alimentos">Manipulación de Alimentos</option>
-                                            <option value="manipulacion_de_farmacos">Manipulación Productos Farmacéuticos</option>
-                                            <option value="neurologico">Neurológico</option>
-                                            <option value="osteomuscular">Osteomuscular</option>
-                                            <option value="osteomuscular_fisioterapia">Osteomuscular - Fisioterapia</option>
-                                            <option value="pruebas_psicosensometricas">Pruebas Psicosensométricas</option>
-                                            <option value="riesgo_covid-19">Riesgo para COVID-19</option>
-                                            <option value="sistema_fonatorio">Sistema Fonatorio</option>                                    
-                                            <option value="trabajo_en_alturas">Trabajo en Alturas</option>
-                                            <option value="trabajo_riesgo_electrico">Trabajo Riesgo Eléctrico</option>
-                                            <option value="no_aplica">No Aplica</option>                                               
-                                        </select>
-                                    </div>
-                                    <x-input-error for="enfasis" class="text-danger" />
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <div class="input-group">
@@ -68,6 +41,127 @@
                                         </select>
                                     </div>
                                     <x-input-error for="medio_venta" class="text-danger" />
+                                </div>
+                                <div class="col-md-12">
+                                    <span id="enfasis" class="input-group-text">Énfasis
+                                        en:</span>
+                                </div>
+                                <div class="col-md-12 mt-3 ml-3">
+                                    <div class="row">
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="brigadista" wire:model="enfasis"
+                                                value="brigadista" class="form-check-input">
+                                            <label for="brigadista" class="form-check-label">Brigadista</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="conductor" wire:model="enfasis"
+                                                value="conductor" class="form-check-input">
+                                            <label for="conductor" class="form-check-label">Conducción de
+                                                Vehículo</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="espacios_confinados"
+                                                wire:model="enfasis" value="espacios_confinados"
+                                                class="form-check-input">
+                                            <label for="espacios_confinados" class="form-check-label">Espacios
+                                                Confinados</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="expo_radiaciones_ionizantes"
+                                                wire:model="enfasis"
+                                                value="expo_radiaciones_ionizantes" class="form-check-input">
+                                            <label for="expo_radiaciones_ionizantes" class="form-check-label">Exposición
+                                                a Radiaciones ionizantes</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="manipulacion_de_alimentos"
+                                                wire:model="enfasis" value="manipulacion_de_alimentos"
+                                                class="form-check-input">
+                                            <label for="manipulacion_de_alimentos" class="form-check-label">Manipulación
+                                                de Alimentos</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="manipulacion_de_farmacos"
+                                                wire:model="enfasis" value="manipulacion_de_farmacos"
+                                                class="form-check-input">
+                                            <label for="manipulacion_de_farmacos" class="form-check-label">Manipulación
+                                                Productos Farmacéuticos</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="trabajo_en_alturas"
+                                                wire:model="enfasis" value="trabajo_en_alturas"
+                                                class="form-check-input">
+                                            <label for="trabajo_en_alturas" class="form-check-label">Trabajo en
+                                                Alturas</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="trabajo_riesgo_electrico"
+                                                wire:model="enfasis" value="trabajo_riesgo_electrico"
+                                                class="form-check-input">
+                                            <label for="trabajo_riesgo_electrico" class="form-check-label">Trabajo
+                                                Riesgo Eléctrico</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="riesgo_covid-19" wire:model="enfasis"
+                                                value="riesgo_covid-19" class="form-check-input">
+                                            <label for="riesgo_covid-19" class="form-check-label">Riesgo para
+                                                COVID-19</label>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="cardiomuscular" wire:model="enfasis"
+                                                value="cardiomuscular" class="form-check-input">
+                                            <label for="cardiomuscular"
+                                                class="form-check-label">Cardiomuscular</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="dermatologico" wire:model="enfasis"
+                                                value="dermatologico" class="form-check-input">
+                                            <label for="dermatologico" class="form-check-label">Dermatológico</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="pruebas_psicosensometricas"
+                                                wire:model="enfasis"
+                                                value="pruebas_psicosensometricas" class="form-check-input">
+                                            <label for="pruebas_psicosensometricas" class="form-check-label">Pruebas
+                                                Psicosensométricas</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="osteomuscular_fisioterapia"
+                                                wire:model="enfasis"
+                                                value="osteomuscular_fisioterapia" class="form-check-input">
+                                            <label for="osteomuscular_fisioterapia"
+                                                class="form-check-label">Osteomuscular
+                                                - Fisioterapia</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="neurologico" wire:model="enfasis"
+                                                value="neurologico" class="form-check-input">
+                                            <label for="neurologico" class="form-check-label">Neurológico</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="osteomuscular" wire:model="enfasis"
+                                                value="osteomuscular" class="form-check-input">
+                                            <label for="osteomuscular" class="form-check-label">Osteomuscular</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="sistema_fonatorio"
+                                                wire:model="enfasis" value="sistema_fonatorio"
+                                                class="form-check-input">
+                                            <label for="sistema_fonatorio" class="form-check-label">Sistema
+                                                Fonatorio</label>
+                                        </div>
+                                        <div class="form-check col-md-2">
+                                            <input type="checkbox" id="no_aplica" wire:model="enfasis"
+                                                value="no_aplica" class="form-check-input">
+                                            <label for="no_aplica" class="form-check-label">No Aplica</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <hr>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <div class="input-group">
@@ -89,30 +183,45 @@
                                     <div class="input-group">
                                         <span class="input-group-text col-md-4">Buscar
                                             Paciente:</span>
-                                        <x-input wire:model.live="search" class="form-control col-md-8" name="search"
-                                            id="search" placeholder="Busqueda por nombre o cedula"
+                                        <x-input wire:model.live="search" class="form-control col-md-8"
+                                            name="search" id="search" placeholder="Busqueda por nombre o cedula"
                                             wire:change="searchPaciente" />
                                         <div wire:loading>
-                                            <span class="text text-success text-bold">Buscando Paciente......</span>
+                                            <span class="text text-success text-bold">Buscando
+                                                Paciente......</span>
                                         </div>
                                     </div>
                                 </div>
-
-                                @foreach ($pacientes as $paciente)
-                                    <div class="mb-3 col-md-6">
-                                        <div class="input-group">
-                                            <span id="paciente_id" class="input-group-text col-6 col-md-4 text-md-end"
-                                                for="paciente_id">Paciente solicita:</span>
-                                            <select wire:model="paciente_id" class="form-control col-6 col-md-8"
-                                                name="paciente_id">
-                                                <option value="">Seleccione...</option>
-                                                <option value="{{ $paciente->id }}">
-                                                    {{ $paciente->nombres . ' ' . $paciente->apellidos }}
-                                                </option>
-                                            </select>
-                                            <x-input-error for="paciente_id" />
+                                @if ($search)
+                                    @if (empty($pacientes) ||
+                                            (is_array($pacientes) && count($pacientes) === 0) ||
+                                            ($pacientes instanceof \Illuminate\Database\Eloquent\Collection && $pacientes->isEmpty()))
+                                        <div class="mb-3 col-md-6">
+                                            <div class="input-group">
+                                                <a href="{{ route('admin.paciente.pacientes.create') }}"
+                                                    class="btn btn-outline-success" target="_blank">Crear
+                                                    Paciente</a>
+                                            </div>
                                         </div>
-                                @endforeach
+                                    @else
+                                        @foreach ($pacientes as $paciente)
+                                            <div class="mb-3 col-md-6">
+                                                <div class="input-group">
+                                                    <span id="paciente_id"
+                                                        class="input-group-text col-6 col-md-4 text-md-end"
+                                                        for="paciente_id">Paciente solicita:</span>
+                                                    <select wire:model="paciente_id"
+                                                        class="form-control col-6 col-md-8" name="paciente_id">
+                                                        <option value="">Seleccione...</option>
+                                                        <option value="{{ $paciente->id }}">
+                                                            {{ $paciente->nombres . ' ' . $paciente->apellidos }}
+                                                        </option>
+                                                    </select>
+                                                    <x-input-error for="paciente_id" />
+                                                </div>
+                                        @endforeach
+                                    @endif
+                                @endif
                             </div>
 
                             <div class="mb-3 col-md-6 text-left">
@@ -122,7 +231,8 @@
                                         name="cliente_id" wire:change='openModal'>
                                         <option value="">Seleccione...</option>
                                         @foreach ($clientes as $cliente)
-                                            <option value="{{ $cliente->id }}">{{ $cliente->razon_social }}</option>
+                                            <option value="{{ $cliente->id }}">{{ $cliente->razon_social }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -158,7 +268,8 @@
                                                                 cliente
                                                                 actual</p>
                                                             <a class="btn btn-outline-success btn-sm"
-                                                                href="{{ route('admin.tarifario.create', $clienteSeleccionado->id) }}" target="_blank">Crear
+                                                                href="{{ route('admin.tarifario.create', $clienteSeleccionado->id) }}"
+                                                                target="_blank">Crear
                                                                 Tarifario</a>
                                                         </div>
                                                     @else
@@ -179,7 +290,8 @@
                                                                                 value="{{ $tarifa->id }}"></td>
                                                                         <td>{{ $tarifa->nombre }}</td>
                                                                         <td>$ {{ $tarifa->precio }} COP</td>
-                                                                        <td>{{ $tarifa->ciudad->nombre_ciudad }}</td>
+                                                                        <td>{{ $tarifa->ciudad->nombre_ciudad }}
+                                                                        </td>
                                                                     </tr>
                                                                 @endforeach
                                                         </table>
@@ -205,7 +317,6 @@
                                     $('#exampleModal').on('show.bs.modal', event => {
                                         var button = $(event.relatedTarget);
                                         var modal = $(this);
-                                        // Use above variables to manipulate the DOM
 
                                     });
                                 </script>
@@ -224,8 +335,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="{{ route('admin.ordendeservicios.index') }}"
-                                class="btn btn-outline-primary"><i class="fas fa-arrow-circle-left"></i>
+                            <a href="{{ route('admin.ordendeservicios.index') }}" class="btn btn-outline-primary"><i
+                                    class="fas fa-arrow-circle-left"></i>
                                 Volver</a>
                         </div>
                     </div>

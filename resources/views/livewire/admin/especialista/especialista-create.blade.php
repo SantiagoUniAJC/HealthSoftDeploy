@@ -59,7 +59,6 @@
                                         <option selected></option>
                                         <option value="1">Masculino</option>
                                         <option value="2">Femenino</option>
-                                        <option value="3">Sin Identificar</option>
                                     </select>
                                 </div>
                                 <x-input-error class="text-danger" for="genero" />
@@ -125,11 +124,19 @@
                                     <select wire:model="especialidad_medica"
                                         class="form-control form-control-md col-md-7" name="especialidad_medica">
                                         <option selected></option>
-                                        <option value="1">Médico Laboral</option>
-                                        <option value="2">Optometra</option>
-                                        <option value="3">Psicolog@</option>
-                                        <option value="4">Fonoaudiol@</option>
-                                        <option value="5">Aux enfermeria</option>
+                                        <option value="1">Aux enfermeria</option>
+                                        <option value="2">Aux Laboratorio</option>
+                                        <option value="3">Aux Fisioterapia@</option>
+                                        <option value="4">Bacteriolog@</option>
+                                        <option value="5">Enfermer@ Jefe</option>
+                                        <option value="6">Fonoaudiol@</option>
+                                        <option value="7">Fisioterapeuta</option>
+                                        <option value="8">Medico General</option>
+                                        <option value="9">Médico Laboral</option>
+                                        <option value="10">Nutricionista</option>
+                                        <option value="11">Optometra</option>
+                                        <option value="12">Psicolog@</option>
+
                                     </select>
                                 </div>
                                 <x-input-error class="text-danger" for="especialidad_medica" />

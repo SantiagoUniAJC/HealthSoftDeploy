@@ -174,7 +174,7 @@
                                         <ul>
                                             @foreach ($paciente->archivosAdjuntos as $adjunto)
                                                 {{-- // icono de desacarga --}}
-                                                <i class="fas fa-download"> <a
+                                                <i class="fas fa-eye"> <a
                                                         href="{{ route('admin.pacientes.descargar-documento', $adjunto->id) }}"
                                                         target="_blank">{{ $adjunto->nombre }}</a>
                                                 </i><i class="mr-3"></i>

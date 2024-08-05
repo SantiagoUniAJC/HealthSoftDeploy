@@ -356,7 +356,7 @@ return [
             'icon'    => 'fas fa-tasks',
             'submenu' => [
                 [
-                    'text' => 'Citas Pendientes',
+                    'text' => 'Inasistencias & Cancelaciones',
                     'url'  => 'admin/agendas/citas-pendientes',
                     'icon'    => 'fas fa-fw fa-calendar',
                     'icon_color' => 'red',

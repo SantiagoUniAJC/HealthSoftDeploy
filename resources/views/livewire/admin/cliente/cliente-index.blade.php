@@ -137,11 +137,6 @@
                             <div class="col-md-6">
                                 {{ $clientes->links() }}
                             </div>
-                            <div class="col-md-6">
-                                <a class="btn btn-outline-secondary"
-                                    href="{{ route('admin.cliente.clientes.index') }}"> <i class="fas fa-sync-alt"></i>
-                                    Actualizar</a>
-                            </div>
                         </div>
                     </div>
                 @else

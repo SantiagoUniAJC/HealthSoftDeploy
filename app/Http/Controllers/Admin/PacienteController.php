@@ -212,6 +212,6 @@ class PacienteController extends Controller
 
         $ruta = public_path($documento->ruta);
 
-        return response()->download($ruta);
+        return response()->file($ruta);
     }
 }

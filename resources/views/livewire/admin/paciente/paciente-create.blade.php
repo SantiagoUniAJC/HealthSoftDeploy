@@ -10,7 +10,8 @@
                         <div class="row">
                             <div class="mb-2 col-md-4">
                                 <div class="input-group">
-                                    <span id="nombres" class="input-group-text col-md-5" for="nombres">Nombres:</span>
+                                    <span id="nombres" class="input-group-text col-md-5"
+                                        for="nombres">Nombres:</span>
                                     <x-input wire:model="nombres" type="text" class="form-control col-md-7"
                                         name="nombres" />
                                 </div>
@@ -46,11 +47,11 @@
                             </div>
                             <div class="mb-2 col-md-4">
                                 <div class="input-group">
-                                    <span id="numero_identificacion"  class="input-group-text col-md-5"
+                                    <span id="numero_identificacion" class="input-group-text col-md-5"
                                         for="numero_identificacion">Número
                                         Documento:</span>
                                     <x-input wire:model="numero_identificacion" type="number" class="form-control"
-                                        name="numero_identificacion" min="0"/>
+                                        name="numero_identificacion" min="0" />
                                 </div>
                                 <x-input-error for="numero_identificacion" class="text-danger" />
                             </div>
@@ -62,7 +63,6 @@
                                         <option selected></option>
                                         <option value="1">Masculino</option>
                                         <option value="2">Femenino</option>
-                                        <option value="3">Sin Identificar</option>
                                     </select>
                                 </div>
                                 <x-input-error for="genero" class="text-danger" />
@@ -72,8 +72,8 @@
                                     <span id="fecha_de_nacimiento" class="input-group-text col-md-5"
                                         for="fecha_de_nacimiento">Fecha
                                         Nacimiento:</span>
-                                    <x-input wire:model="fecha_de_nacimiento" type="date" class="form-control col-md-7"
-                                        name="fecha_de_nacimiento" />
+                                    <x-input wire:model="fecha_de_nacimiento" type="date"
+                                        class="form-control col-md-7" name="fecha_de_nacimiento" />
                                 </div>
                                 <x-input-error for="fecha_de_nacimiento" class="text-danger" />
                             </div>
@@ -116,14 +116,14 @@
                                         <option value="5">Mulato</option>
                                         <option value="6">Palenquero</option>
                                         <option value="7">Raizal</option>
-                                        <option value="8">Otro</option>
                                     </select>
                                 </div>
                                 <x-input-error for="grupo_etnico" class="text-danger" />
                             </div>
                             <div class="mb-2 col-md-4">
                                 <div class="input-group">
-                                    <span class="input-group-text col-md-5" for="nivel_estudio">Nivel de estudio:</span>
+                                    <span class="input-group-text col-md-5" for="nivel_estudio">Nivel de
+                                        estudio:</span>
                                     <select wire:model="nivel_estudio" class="form-control form-control-md col-md-7"
                                         name="nivel_estudio">
                                         <option selected></option>
@@ -133,9 +133,6 @@
                                         <option value="4">Técnologo</option>
                                         <option value="5">Pregrado</option>
                                         <option value="6">Posgrado</option>
-                                        <option value="7">Especialización</option>
-                                        <option value="8">Maestria</option>
-                                        <option value="9">Otros</option>
                                     </select>
                                 </div>
                                 <x-input-error for="nivel_estudio" class="text-danger" />
@@ -152,7 +149,6 @@
                                         <option value="4">Separado(a)</option>
                                         <option value="5">Divorciado(a)</option>
                                         <option value="6">Viudo(a)</option>
-                                        <option value="7">Otros</option>
                                     </select>
                                 </div>
                                 <x-input-error for="estado_civil" class="text-danger" />
@@ -181,9 +177,10 @@
                             </div>
                             <div class="mb-2 col-md-4">
                                 <div class="input-group">
-                                    <span class="input-group-text col-md-5" for="ciudad_residencia">Ciudad Residencia :</span>
-                                    <select wire:model="ciudad_residencia" class="form-control form-control-md col-md-7"
-                                        name="ciudad_residencia">
+                                    <span class="input-group-text col-md-5" for="ciudad_residencia">Ciudad Residencia
+                                        :</span>
+                                    <select wire:model="ciudad_residencia"
+                                        class="form-control form-control-md col-md-7" name="ciudad_residencia">
                                         <option selected></option>
                                         <option value="Santiago de Cali">Santiago de Cali</option>
                                         <option value="Buga">Buga</option>
@@ -232,8 +229,8 @@
                                     <span id="direccion_residencia" class="input-group-text col-md-5"
                                         for="direccion_residencia">Dirección
                                         de Residencia:</span>
-                                    <x-input wire:model="direccion_residencia" type="text" class="form-control col-md-7"
-                                        name="direccion_residencia" />
+                                    <x-input wire:model="direccion_residencia" type="text"
+                                        class="form-control col-md-7" name="direccion_residencia" />
                                 </div>
                                 <x-input-error for="direccion_residencia" class="text-danger" />
                             </div>
@@ -258,8 +255,8 @@
                                 <div class="input-group">
                                     <span class="input-group-text col-md-5" for="zona_residencial">Zona residencial
                                         :</span>
-                                    <select wire:model="zona_residencial" class="form-control form-control-md col-md-7"
-                                        name="zona_residencial">
+                                    <select wire:model="zona_residencial"
+                                        class="form-control form-control-md col-md-7" name="zona_residencial">
                                         <option selected></option>
                                         <option value="1">Urbana</option>
                                         <option value="1">Rural</option>
@@ -297,7 +294,6 @@
                                         <option value="22">22</option>
                                     </select>
                                 </div>
-                                <x-input-error for="comuna" class="text-danger" />
                             </div>
                             <div class="mb-2 col-md-4">
                                 <div class="input-group">
@@ -321,7 +317,8 @@
                             <div class="mb-2 col-md-4">
                                 <div class="input-group">
                                     <span id="eps" class="input-group-text col-md-5" for="eps">EPS:</span>
-                                    <select wire:model="eps" class="form-control form-control-md col-md-7" name="eps">
+                                    <select wire:model="eps" class="form-control form-control-md col-md-7"
+                                        name="eps">
                                         <option selected></option>
                                         <option value="1">Aliansalud</option>
                                         <option value="2">Compensar</option>
@@ -333,7 +330,8 @@
                                         <option value="8">Sanitas</option>
                                         <option value="9">Salud Total</option>
                                         <option value="10">SURA</option>
-                                        <option value="11">Otra</option>
+                                        <option value="11">No tiene</option>
+                                        <option value="12">No recuerda</option>
                                     </select>
                                 </div>
                                 <x-input-error for="eps" class="text-danger" />
@@ -341,7 +339,8 @@
                             <div class="mb-2 col-md-4">
                                 <div class="input-group">
                                     <span id="arl" class="input-group-text col-md-5" for="eps">ARL:</span>
-                                    <select wire:model="arl" class="form-control form-control-md col-md-7" name="arl">
+                                    <select wire:model="arl" class="form-control form-control-md col-md-7"
+                                        name="arl">
                                         <option selected></option>
                                         <option value="1">Bolívar</option>
                                         <option value="2">Colmena</option>
@@ -349,7 +348,8 @@
                                         <option value="4">Liberty</option>
                                         <option value="5">SURA</option>
                                         <option value="6">MAPFRE</option>
-                                        <option value="7">Otra</option>
+                                        <option value="7">No tiene</option>
+                                        <option value="8">No recuerda</option>
                                     </select>
                                 </div>
                                 <x-input-error for="arl" class="text-danger" />
@@ -357,13 +357,15 @@
                             <div class="mb-2 col-md-4">
                                 <div class="input-group">
                                     <span id="afp" class="input-group-text col-md-5" for="afp">AFP:</span>
-                                    <select wire:model="afp" class="form-control form-control-md col-md-7" name="afp">
+                                    <select wire:model="afp" class="form-control form-control-md col-md-7"
+                                        name="afp">
                                         <option selected></option>
                                         <option value="1">Colfondos</option>
                                         <option value="2">Porvenir</option>
                                         <option value="3">Protección</option>
                                         <option value="4">Skandia</option>
-                                        <option value="5">Otra</option>
+                                        <option value="5">No tiene</option>
+                                        <option value="6">No recuerda</option>
                                     </select>
                                 </div>
                                 <x-input-error for="afp" class="text-danger" />
@@ -372,8 +374,8 @@
                                 <div class="input-group">
                                     <span id="cargo_a_desempeñar" class="input-group-text col-md-5"
                                         for="cargo_a_desempeñar">Cargo a desempeñar:</span>
-                                    <x-input wire:model="cargo_a_desempeñar" type="text" class="form-control col-md-7"
-                                        name="acompañante" />
+                                    <x-input wire:model="cargo_a_desempeñar" type="text"
+                                        class="form-control col-md-7" name="acompañante" />
                                 </div>
                                 <x-input-error for="cargo_a_desempeñar" class="text-danger" />
                             </div>
@@ -401,8 +403,8 @@
                 </div>
             </div>
             <div class="card-footer text-center">
-                <a href="{{ route('admin.paciente.pacientes.index') }}" type="submit" class="btn btn-outline-primary"><i
-                        class="fas fa-arrow-left"> </i> Volver</a>
+                <a href="{{ route('admin.paciente.pacientes.index') }}" type="submit"
+                    class="btn btn-outline-primary"><i class="fas fa-arrow-left"> </i> Volver</a>
             </div>
         </div>
     </div>

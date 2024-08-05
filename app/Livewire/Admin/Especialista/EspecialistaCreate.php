@@ -46,7 +46,7 @@ class EspecialistaCreate extends Component
             'path_fotografia' => 'nullable|image|max:2048',
             'direccion_residencia' => 'required',
             'telefono_contacto1' => 'required',
-            'telefono_contacto2' => 'required',
+            'telefono_contacto2' => 'nullable',
             'email' => 'required',
             'especialidad_medica' => 'required',
             'registro_medico' => 'required',

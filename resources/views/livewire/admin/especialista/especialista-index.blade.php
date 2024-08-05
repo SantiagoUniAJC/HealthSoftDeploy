@@ -86,8 +86,6 @@
                         <div class="col-md-6">
                             {{ $especialistas->links() }}
                         </div>
-                        <a class="btn btn-outline-secondary mx-auto col-md-4 h-25 d-inline-block"
-                            href="{{ route('admin.especialista.especialistas.index') }}">Actualizar</a>
                     </div>
                 </div>
             </div>

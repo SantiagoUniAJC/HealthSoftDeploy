@@ -60,7 +60,7 @@ class PacienteCreate extends Component
             'direccion_residencia' => 'required',
             'estrato' => 'required',
             'zona_residencial' => 'required',
-            'comuna' => 'required',
+            'comuna' => 'nullable',
             'telefono' => 'required',
             'email' => ['required', 'email', Rule::unique('pacientes', 'email')],
             'eps' => 'required',

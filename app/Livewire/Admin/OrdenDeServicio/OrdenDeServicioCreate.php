@@ -21,7 +21,7 @@ class OrdenDeServicioCreate extends Component
     public $open = false;
 
     public $tipo_evaluacion;
-    public $enfasis;
+    public $enfasis = [];
     public $medio_venta;
     public $prestador_de_salud_id;
     public $paciente_id;
@@ -71,7 +71,7 @@ class OrdenDeServicioCreate extends Component
 
         $this->validate([
             'tipo_evaluacion' => 'required',
-            'enfasis' => 'required',
+            'enfasis' => 'required|array|min:1',
             'medio_venta' => 'required',
             'prestador_de_salud_id' => 'required',
             'paciente_id' => 'required',
@@ -89,13 +89,11 @@ class OrdenDeServicioCreate extends Component
         }
 
         $ordenDeServicio = OrdenDeServicio::create(array(
-            // 'orden_numero' => 'HSEQ-' . date('Ymd') . '-' . rand(1, 999999),
             'orden_numero' => 'HSEQ-' . date('Ymd') . '-' . rand(1, 999999),
             'tipo_evaluacion' => $this->tipo_evaluacion,
-            'enfasis' => $this->enfasis,
+            'enfasis' => json_encode($this->enfasis),
             'medio_venta' => $this->medio_venta,
             'prestador_de_salud_id' => $this->prestador_de_salud_id,
-            //'usuario_solicita' => $this->user = User::findOrFail(auth()->user()->id),
             'usuario_solicita' => auth()->user()->id,
             'paciente_id' => $this->paciente_id,
             'cliente_id' => $this->cliente_id,
