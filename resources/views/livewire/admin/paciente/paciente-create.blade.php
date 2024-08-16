@@ -167,10 +167,14 @@
                                 <div class="input-group">
                                     <span class="input-group-text col-md-5" for="departamento_residencia">Departamento
                                         Residencia:</span>
-                                    <select wire:model="departamento_residencia"
+                                    <select wire:change='getCiudades($event.target.value)'
+                                        wire:model="departamento_residencia"
                                         class="form-control form-control-md col-md-7" name="departamento_residencia">
-                                        <option selected></option>
-                                        <option value="1">Valle del Cauca</option>
+                                        <option selected>Seleccione una Departamento</option>
+                                        @foreach ($departamentos as $dpto)
+                                            <option value="{{ $dpto['state_name'] }}">{{ $dpto['state_name'] }}
+                                            </option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <x-input-error for="departamento_residencia" class="text-danger" />
@@ -179,47 +183,14 @@
                                 <div class="input-group">
                                     <span class="input-group-text col-md-5" for="ciudad_residencia">Ciudad Residencia
                                         :</span>
-                                    <select wire:model="ciudad_residencia"
+                                    <select wire:change='getCiudades()' wire:model="ciudad_residencia"
                                         class="form-control form-control-md col-md-7" name="ciudad_residencia">
-                                        <option selected></option>
-                                        <option value="Santiago de Cali">Santiago de Cali</option>
-                                        <option value="Buga">Buga</option>
-                                        <option value="Tuluá">Tuluá</option>
-                                        <option value="Cartago">Cartago</option>
-                                        <option value="Buenaventura">Buenaventura</option>
-                                        <option value="Candelaria">Candelaria</option>
-                                        <option value="Florida">Florida</option>
-                                        <option value="Pradera">Pradera</option>
-                                        <option value="La Victoria">La Victoria</option>
-                                        <option value="El Cerrito">El Cerrito</option>
-                                        <option value="La Unión">La Unión</option>
-                                        <option value="Obando">Obando</option>
-                                        <option value="Ansermanuevo">Ansermanuevo</option>
-                                        <option value="Bolívar">Bolívar</option>
-                                        <option value="Caicedonia">Caicedonia</option>
-                                        <option value="Calima">Calima</option>
-                                        <option value="Dagua">Dagua</option>
-                                        <option value="El Águila">El Águila</option>
-                                        <option value="El Cairo">El Cairo</option>
-                                        <option value="El Dovio">El Dovio</option>
-                                        <option value="Ginebra">Ginebra</option>
-                                        <option value="Guacarí">Guacarí</option>
-                                        <option value="Jamundí">Jamundí</option>
-                                        <option value="La Cumbre">La Cumbre</option>
-                                        <option value="Palmira">Palmira</option>
-                                        <option value="Restrepo">Restrepo</option>
-                                        <option value="Riofrío">Riofrío</option>
-                                        <option value="Roldanillo">Roldanillo</option>
-                                        <option value="San Pedro">San Pedro</option>
-                                        <option value="Sevilla">Sevilla</option>
-                                        <option value="Toro">Toro</option>
-                                        <option value="Trujillo">Trujillo</option>
-                                        <option value="Ulloa">Ulloa</option>
-                                        <option value="Versalles">Versalles</option>
-                                        <option value="Vijes">Vijes</option>
-                                        <option value="Yotoco">Yotoco</option>
-                                        <option value="Yumbo">Yumbo</option>
-                                        <option value="Zarzal">Zarzal</option>
+
+                                        @foreach ($ciudades as $ciudad)
+                                            <option value="{{ $ciudad['city_name'] }}">{{ $ciudad['city_name'] }}
+                                            </option>
+                                        @endforeach
+
                                     </select>
                                 </div>
                                 <x-input-error for="ciudad_residencia" class="text-danger" />

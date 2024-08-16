@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Paciente;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Http;
 
 class PacienteCreate extends Component
 {
@@ -35,9 +36,59 @@ class PacienteCreate extends Component
     public $acompañante;
     public $cargo_a_desempeñar;
 
+    public $token;
+    public $pais;
+    public $departamentos;
+    public $ciudades;
+
     public function render()
     {
         return view('livewire.admin.paciente.paciente-create');
+    }
+
+    public function mount()
+    {
+        # API UNIVERSAL TUTORIAL PARA OBTENER PAIS.
+        $response = Http::withHeaders([
+            "Accept" => "application/json",
+            "api-token" => "lYAIKDRoIwa4woWVxDEPLrgUHE7S-d5AlFO-wO2ZD2RqCnucdvb9d-F12AaSh_iV2v4",
+            "user-email" => "health.software1@gmail.com"
+        ])->get('https://www.universal-tutorial.com/api/getaccesstoken');
+
+        $this->token = $response->json('auth_token');
+
+        $pais = Http::withHeaders([
+            "Authorization" => "Bearer " . $this->token,
+            "Accept" => "application/json",
+        ])->get('https://www.universal-tutorial.com/api/countries/');
+
+        $this->pais = $pais->json('46');
+
+        $this->cargarDepartamentos();
+    }
+
+    public function cargarDepartamentos()
+    {
+        $departamentos = Http::withHeaders([
+            "Authorization" => "Bearer " . $this->token,
+            "Accept" => "application/json",
+        ])->get('https://www.universal-tutorial.com/api/states/Colombia');
+
+        $this->departamentos = $departamentos->json();
+
+        $this->ciudades = [];
+    }
+
+    public function getCiudades()
+    {
+        $this->departamento_residencia;
+
+        $ciudades = Http::withHeaders([
+            "Authorization" => "Bearer " . $this->token,
+            "Accept" => "application/json",
+        ])->get('https://www.universal-tutorial.com/api/cities/' . $this->departamento_residencia);
+
+        $this->ciudades = $ciudades->json();
     }
 
     public function createPaciente()
@@ -75,7 +126,7 @@ class PacienteCreate extends Component
         if ($this->path_fotografia) {
             $path = $this->path_fotografia->store('public/pacientes');
         }
-    
+
         $url_path = $path ? Storage::url($path) : null;
 
         Paciente::create([
@@ -86,10 +137,10 @@ class PacienteCreate extends Component
             'genero' => $this->genero,
             'fecha_de_nacimiento' => $this->fecha_de_nacimiento,
             'tipo_sangre' => $this->tipo_sangre,
-            'factor_rh' => $this-> factor_rh,
-            'grupo_etnico' => $this-> grupo_etnico,
-            'nivel_estudio' => $this-> nivel_estudio,
-            'estado_civil' => $this-> estado_civil,
+            'factor_rh' => $this->factor_rh,
+            'grupo_etnico' => $this->grupo_etnico,
+            'nivel_estudio' => $this->nivel_estudio,
+            'estado_civil' => $this->estado_civil,
             'path_fotografia' => $url_path,
             'departamento_residencia' => $this->departamento_residencia,
             'ciudad_residencia' => $this->ciudad_residencia,
